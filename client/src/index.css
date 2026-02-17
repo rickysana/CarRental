@@ -12,3 +12,16 @@
   --color-light: #F1F5F9;
   --color-borderColor: #c4c7d2; 
 }
+
+.hero-car{
+  --rx: 0deg;
+  --ry: 0deg;
+  --ty: 0px;
+  transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--ty));
+  transition: transform 120ms ease, filter 120ms ease;
+  will-change: transform;
+}
+
+.hero-car:hover{
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.18));
+}
