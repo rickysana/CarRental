@@ -4,6 +4,8 @@ import { assets, cityList } from '../assets/assets'
 const Hero = () => {
   const carRef = useRef(null)
   const[pickupLocation, setPickupLocation] = useState('')
+  const[pickupDate, setPickupDate] = useState('')
+  const[dropDate, setDropDate] = useState('')
 
   const handleMove = (event) => {
     const node = carRef.current
@@ -47,6 +49,31 @@ const Hero = () => {
                 {cityList.map((city)=> <option key={city} value={city}>{city}</option>)}
                 </select>
                 <p className='px-1 text-sm text-gray-500'>{pickupLocation ? pickupLocation : 'Please select location'}</p>
+              </div>
+
+              <div className='flex flex-col items-start gap-2'>
+                <input 
+                  type="date" 
+                  required 
+                  value={pickupDate} 
+                  onChange={(e)=>setPickupDate(e.target.value)}
+                  className='px-4 py-2 border rounded'
+                  placeholder='Pickup Date'
+                />
+                <p className='px-1 text-sm text-gray-500'>{pickupDate ? pickupDate : 'Select pickup date'}</p>
+              </div>
+
+              <div className='flex flex-col items-start gap-2'>
+                <input 
+                  type="date" 
+                  required 
+                  value={dropDate} 
+                  onChange={(e)=>setDropDate(e.target.value)}
+                  className='px-4 py-2 border rounded'
+                  placeholder='Drop Date'
+                  min={pickupDate}
+                />
+                <p className='px-1 text-sm text-gray-500'>{dropDate ? dropDate : 'Select drop date'}</p>
               </div>
           </div>
 
