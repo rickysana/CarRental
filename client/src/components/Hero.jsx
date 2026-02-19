@@ -39,7 +39,7 @@ const Hero = () => {
   return (
     <div className='h-screen flex flex-col items-center justify-center gap-14 bg-light text-center'>
 
-        <h1 className='text-4xl md:text-5xl font-semibold'> Vehical on Rent</h1>
+        <h1 className='text-4xl md:text-5xl font-semibold'> Find Your Perfect Ride </h1>
 
         <form className='flex flex-col md:flex-row items-start md:items-center justify-between p-6 rounded-lg md:rounded-full w-full max-w-80 md:max-w-200 bg-white shadow-[0px_8px_20px_rgbs(0,0,0,0.1)]'>
 
@@ -51,32 +51,22 @@ const Hero = () => {
                 </select>
                 <p className='px-1 text-sm text-gray-500'>{pickupLocation ? pickupLocation : 'Please select location'}</p>
               </div>
-
               <div className='flex flex-col items-start gap-2'>
-                <input 
-                  type="date" 
-                  required 
-                  value={pickupDate} 
-                  onChange={(e)=>setPickupDate(e.target.value)}
-                  className='px-4 py-2 border rounded'
-                  placeholder='Pickup Date'
-                />
-                <p className='px-1 text-sm text-gray-500'>{pickupDate ? pickupDate : 'Select pickup date'}</p>
+                <label htmlFor='pickup-date'> Pickup Date</label>
+                <input type='date' id="pickup-date" min={new Date().toISOString().split('T')[0]} className='text-sm text-gray-500' required/>
               </div>
 
               <div className='flex flex-col items-start gap-2'>
-                <input 
-                  type="date" 
-                  required 
-                  value={dropDate} 
-                  onChange={(e)=>setDropDate(e.target.value)}
-                  className='px-4 py-2 border rounded'
-                  placeholder='Drop Date'
-                  min={pickupDate}
-                />
-                <p className='px-1 text-sm text-gray-500'>{dropDate ? dropDate : 'Select drop date'}</p>
+                <label htmlFor='return-date'> Return Date</label>
+                <input type='date' id="return-date" className='text-sm text-gray-500' required/>
               </div>
-          </div>
+
+              </div>
+              <button className='flex items-center justify-center gap-1 px-9 py-3 max-sm:mt-4 bg-primary hover:bg-primary-dull text-white rounded-full cursor-pointer'>
+                <img src={assets.search_icon} alt="Search" className='brightness-300'/>
+                Search
+              </button>
+          
 
         </form>
 

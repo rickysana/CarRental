@@ -40,6 +40,8 @@ import car_image1 from "./car_image1.png"
 import car_image2 from "./car_image2.png"
 import car_image3 from "./car_image3.png"
 import car_image4 from "./car_image4.png"
+import car_image5 from "./car_image5.png"
+import car_image6 from "./car_image6.png"
 
 export const cityList = ['Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chandigarh', 'Delhi', 'Goa', 'Gujarat', 'Haryana', 'Himachal Pradesh', 'Jharkhand', 'Karnataka', 'Kerala', 'Madhya Pradesh', 'Maharashtra', 'Manipur', 'Meghalaya', 'Mizoram', 'Nagaland', 'Odisha', 'Punjab', 'Rajasthan', 'Sikkim', 'Tamil Nadu', 'Telangana', 'Tripura', 'Uttar Pradesh', 'Uttarakhand', 'West Bengal']
 
@@ -85,7 +87,9 @@ export const assets = {
     user_profile,
     car_image2,
     car_image3,
-    car_image4
+    car_image4,
+    car_image5,
+    car_image6
 }
 
 export const menuLinks = [
@@ -103,7 +107,7 @@ export const ownerMenuLinks = [
 
 export const dummyUserData = {
   "_id": "6847f7cab3d8daecdb517095",
-  "name": "GreatStack",
+  "name": "Ricky",
   "email": "admin@example.com",
   "role": "owner",
   "image": user_profile,
@@ -111,73 +115,109 @@ export const dummyUserData = {
 
 export const dummyCarData = [
     {
-        "_id": "67ff5bc069c03d4e45f30b77",
-        "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "BMW",
-        "model": "X5",
-        "image": car_image1,
-        "year": 2006,
-        "category": "SUV",
-        "seating_capacity": 4,
-        "fuel_type": "Hybrid",
-        "transmission": "Semi-Automatic",
-        "pricePerDay": 300,
-        "location": "Delhi",
-        "description": "The BMW X5 is a mid-size luxury SUV produced by BMW. The X5 made its debut in 1999 as the first SUV ever produced by BMW.",
-        "isAvaliable": true,
-        "createdAt": "2025-04-16T07:26:56.215Z",
+  "_id": "67ff5bc069c03d4e45f30b88",
+  "owner": "67fe3467ed8a8fe17d0ba6e2",
+  "brand": "Maruti Suzuki",
+  "model": "Dzire",
+  "image": car_image1,
+  "year": 2022,
+  "category": "Sedan",
+  "seating_capacity": 5,
+  "fuel_type": "Petrol/Diesel",
+  "transmission": "Automatic",
+  "pricePerDay": 1800,
+  "location": "Chandigarh",
+  "description": "The Maruti Suzuki Dzire is a compact sedan known for its excellent fuel efficiency, comfortable ride, and low maintenance cost. It is widely used for city driving as well as taxi and rental services in India. The Dzire offers a spacious cabin, smooth automatic transmission, and reliable performance.",
+  "isAvaliable": true,
+  "createdAt": "2025-04-16T07:26:56.215Z"
     },
+   {
+  "_id": "67ff5bc069c03d4e45f30b89",
+  "owner": "67fe3467ed8a8fe17d0ba6e2",
+  "brand": "Toyota",
+  "model": "Fortuner",
+  "image": car_image2,
+  "year": 2021,
+  "category": "SUV",
+  "seating_capacity": 7,
+  "fuel_type": "Diesel",
+  "transmission": "Automatic",
+  "pricePerDay": 4500,
+  "location": "Chandigarh",
+  "description": "The Toyota Fortuner is a premium full-size SUV known for its powerful engine, off-road capability, and luxury interior. It is widely used for long-distance travel, family trips, and VIP transport in India.",
+  "isAvaliable": true,
+  "createdAt": "2025-04-16T07:26:56.215Z"
+},
+
+   {
+  "_id": "67ff5bc069c03d4e45f30b90",
+  "owner": "67fe3467ed8a8fe17d0ba6e2",
+  "brand": "Maruti Suzuki",
+  "model": "Alto",
+  "image": car_image3,
+  "year": 2020,
+  "category": "Hatchback",
+  "seating_capacity": 5,
+  "fuel_type": "Petrol",
+  "transmission": "Manual",
+  "pricePerDay": 1200,
+  "location": "Chandigarh",
+  "description": "The Maruti Suzuki Alto is a compact and fuel-efficient hatchback ideal for city driving. It is affordable, easy to maintain, and popular for daily commuting and budget rentals in India.",
+  "isAvaliable": true,
+  "createdAt": "2025-04-16T07:26:56.215Z"
+},
     {
-        "_id": "67ff6b758f1b3684286a2a65",
-        "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "Toyota",
-        "model": "Corolla",
-        "image": car_image2,
-        "year": 2021,
-        "category": "Sedan",
-        "seating_capacity": 4,
-        "fuel_type": "Diesel",
-        "transmission": "Manual",
-        "pricePerDay": 130,
-        "location": "Chandigarh",
-        "description": "The Toyota Corolla is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
-        "isAvaliable": true,
-        "createdAt": "2025-04-16T08:33:57.993Z",
-    },
-    {
-        "_id": "67ff6b9f8f1b3684286a2a68",
-        "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "Jeep ",
-        "model": "Wrangler",
-        "image": car_image3,
-        "year": 2023,
-        "category": "SUV",
-        "seating_capacity": 4,
-        "fuel_type": "Hybrid",
-        "transmission": "Automatic",
-        "pricePerDay": 200,
-        "location": "Haryana",
-        "description": "The Jeep Wrangler is a mid-size luxury SUV produced by Jeep. The Wrangler made its debut in 2003 as the first SUV ever produced by Jeep.",
-        "isAvaliable": true,
-        "createdAt": "2025-04-16T08:34:39.592Z",
-    },
-    {
-        "_id": "68009c93a3f5fc6338ea7e34",
-        "owner": "67fe3467ed8a8fe17d0ba6e2",
-        "brand": "Ford",
-        "model": "Neo 6",
-        "image": car_image4,
-        "year": 2022,
-        "category": "Sedan",
-        "seating_capacity": 2,
-        "fuel_type": "Diesel",
-        "transmission": "Semi-Automatic",
-        "pricePerDay": 209,
-        "location": "Patiala",
-        "description": "This is a mid-size luxury sedan produced by Toyota. The Corolla made its debut in 2008 as the first sedan ever produced by Toyota.",
-        "isAvaliable": true,
-        "createdAt": "2025-04-17T06:15:47.318Z",
-    }
+  "_id": "67ff5bc069c03d4e45f30b91",
+  "owner": "67fe3467ed8a8fe17d0ba6e2",
+  "brand": "Royal Enfield",
+  "model": "Classic 350",
+  "image": car_image4,
+  "year": 2022,
+  "category": "Bike",
+  "seating_capacity": 2,
+  "fuel_type": "Petrol",
+  "transmission": "Manual",
+  "pricePerDay": 1500,
+  "location": "Chandigarh",
+  "description": "The Royal Enfield Classic 350 is a retro-styled cruiser motorcycle known for its strong build, comfortable ride, and iconic thumping engine sound. It is popular for touring and long rides.",
+  "isAvaliable": true,
+  "createdAt": "2025-04-16T07:26:56.215Z"
+},
+  {
+  "_id": "67ff5bc069c03d4e45f30b92",
+  "owner": "67fe3467ed8a8fe17d0ba6e2",
+  "brand": "Honda",
+  "model": "Activa 6G",
+  "image": car_image5,
+  "year": 2023,
+  "category": "Scooter",
+  "seating_capacity": 2,
+  "fuel_type": "Petrol",
+  "transmission": "Automatic",
+  "pricePerDay": 800,
+  "location": "Chandigarh",
+  "description": "The Honda Activa 6G is India's most popular scooter known for its reliability, smooth automatic transmission, and excellent fuel efficiency. It is ideal for daily commuting and short city rides.",
+  "isAvaliable": true,
+  "createdAt": "2025-04-16T07:26:56.215Z"
+},
+{
+  "_id": "67ff5bc069c03d4e45f30b93",
+  "owner": "67fe3467ed8a8fe17d0ba6e2",
+  "brand": "Vespa",
+  "model": "VXL 125",
+  "image": car_image6,
+  "year": 2022,
+  "category": "Scooter",
+  "seating_capacity": 2,
+  "fuel_type": "Petrol",
+  "transmission": "Automatic",
+  "pricePerDay": 1200,
+  "location": "Chandigarh",
+  "description": "The Vespa VXL 125 is a premium retro-styled scooter offering comfortable riding, smooth performance, and iconic Italian design. It is perfect for stylish city commuting and leisure rides.",
+  "isAvaliable": true,
+  "createdAt": "2025-04-16T07:26:56.215Z"
+}
+
 ];
 
 export const dummyMyBookingsData = [
