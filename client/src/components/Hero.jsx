@@ -6,6 +6,7 @@ const Hero = () => {
   const[pickupLocation, setPickupLocation] = useState('')
   const[pickupDate, setPickupDate] = useState('')
   const[dropDate, setDropDate] = useState('')
+  
 
   const handleMove = (event) => {
     const node = carRef.current
