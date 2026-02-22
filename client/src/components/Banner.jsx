@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const Banner = () => {
   return (
-    <div className='w-full pt-32 md:pt-40 pb-24 px-6 md:px-16 lg:px-24 xl:px-32'>
+    <div className='w-full pt-12 md:pt-16 pb-24 px-6 md:px-16 lg:px-24 xl:px-32'>
       <div style={{background: 'linear-gradient(135deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0) 100%), #F6F2DE', boxShadow: '0 10px 30px rgba(0,0,0,0.05)'}} className='flex flex-col md:flex-row md:items-start items-center justify-between px-8 min-md:pl-14 pt-10 max-w-6xl mx-auto rounded-2xl overflow-hidden border border-[rgba(0,0,0,0.05)]'>
 
           

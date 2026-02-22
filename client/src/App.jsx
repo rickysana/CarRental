@@ -5,6 +5,7 @@ import CarDetails from './pages/CarDetails'
 import Cars from './pages/Cars'
 import Home from './pages/Home'
 import MyBookings from './pages/MyBookings'
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -17,12 +18,12 @@ const App = () => {
      
     <Routes>
       <Route path='/' element={<Home/>} />
-      <Route path='/car-details/:id' element={<CarDetails/>} />
-      <Route path='/car' element={<Cars/>} />
+      <Route path='/cars' element={<Cars/>} />
+      <Route path='/car/:id' element={<CarDetails/>} />
       <Route path='/my-bookings' element={<MyBookings/>} />
     </Routes>
 
-
+   {!isOwnerPath && <Footer />}
     </>
   )
 }

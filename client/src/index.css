@@ -38,6 +38,11 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 0 3px rgba(31, 41, 55, 0.1);
 }
 
+input.no-focus-ring:focus {
+  border-color: #D1D5DB;
+  box-shadow: none;
+}
+
 /* Link-specific styling */
 a {
   color: #1F2937;
@@ -45,7 +50,7 @@ a {
 }
 
 a:hover {
-  color: #B8860B;
+  color: #dd06c4;
 }
 
 .hero-car{
