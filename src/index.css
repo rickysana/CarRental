@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "tailwindcss";
+
+*{
+   font-family: "Outfit", sans-serif;
+}
+
+@theme{
+  --color-primary: #1F2937;
+  --color-primary-dull: #E7E1CF;
+  --color-light: #F1F5F9;
+  --color-borderColor: #c4c7d2;
+}
+
+body, #root {
+  background: linear-gradient(120deg, #F8FAFC 0%, #F1F5F9 40%, #FEF3C7 100%);
+  background-attachment: fixed;
+}
+
+/* Global button styling */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Global input and form styling */
+input, select, textarea {
+  color: #1F2937;
+}
+
+input::placeholder {
+  color: #9CA3AF;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #1F2937;
+  box-shadow: 0 0 0 3px rgba(31, 41, 55, 0.1);
+}
+
+/* Link-specific styling */
+a {
+  color: #1F2937;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #B8860B;
+}
+
+.hero-car{
+  --rx: 0deg;
+  --ry: 0deg;
+  --ty: 0px;
+  transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)) translateY(var(--ty));
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.12));
+  transition: transform 120ms ease, filter 120ms ease;
+  will-change: transform;
+}
+
+.hero-car:hover{
+  filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.18));
+}
