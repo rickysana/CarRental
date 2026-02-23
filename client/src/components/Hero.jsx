@@ -74,7 +74,7 @@ const Hero = () => {
           ref={carRef}
           src={assets.main_car}
           alt="car"
-          className='max-h-40 md:max-h-80 hero-car'
+          className='max-h-40 md:max-h-90 hero-car'
           onMouseMove={handleMove}
           onMouseLeave={handleLeave}
         />

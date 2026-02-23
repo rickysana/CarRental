@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { assets, menuLinks } from '../assets/assets'
-import { Link, useLocation, useNavigate} from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 
-const Navbar = ({setShowLogin}) => {
+const Navbar = () => {
 
-const location = useLocation()
 const [open, setOpen] = useState(false)
 const navigate = useNavigate()
   return (
@@ -27,7 +26,7 @@ const navigate = useNavigate()
 
             <div className="flex items-center gap-6 ">
               <button onClick={() => navigate('/owner')} className="cursor-pointer text-[#1F2937] hover:text-[#B8860B] font-medium transition-all">Dashboard</button>
-              <button onClick={() => setShowLogin(true)} className="cursor-pointer px-8 py-2 bg-[#F3F0E6] hover:bg-[#E7E1CF] transition-all text-[#1F2937] rounded-full font-medium border border-[#E7E1CF]">Login</button>
+              <button onClick={() => navigate('/login')} className="cursor-pointer px-8 py-2 bg-[#F3F0E6] hover:bg-[#E7E1CF] transition-all text-[#1F2937] rounded-full font-medium border border-[#E7E1CF]">Login</button>
             </div>
         </div>
 
@@ -40,7 +39,7 @@ const navigate = useNavigate()
             ))}
             <div className="flex items-center gap-3">
               <button onClick={() => navigate('/owner')} className="cursor-pointer text-sm text-[#1F2937] hover:text-[#B8860B] font-medium transition-all">Dashboard</button>
-              <button onClick={() => setShowLogin(true)} className="cursor-pointer px-4 py-1 text-sm bg-[#F3F0E6] hover:bg-[#E7E1CF] transition-all text-[#1F2937] rounded-full font-medium border border-[#E7E1CF]">Login</button>
+              <button onClick={() => navigate('/login')} className="cursor-pointer px-4 py-1 text-sm bg-[#F3F0E6] hover:bg-[#E7E1CF] transition-all text-[#1F2937] rounded-full font-medium border border-[#E7E1CF]">Login</button>
             </div>
         </div>
 
@@ -68,7 +67,7 @@ const navigate = useNavigate()
 
             <div className="flex max-sm:flex-col items-start sm:items-center gap-6 ">
               <button onClick={() => navigate('/owner')} className="cursor-pointer text-[#1F2937] hover:text-[#B8860B] font-medium transition-all">Dashboard</button>
-              <button onClick={() => setShowLogin(true)} className="cursor-pointer px-8 py-2 bg-[#F3F0E6] hover:bg-[#E7E1CF] transition-all text-[#1F2937] rounded-full font-medium border border-[#E7E1CF]">Login</button>
+              <button onClick={() => navigate('/login')} className="cursor-pointer px-8 py-2 bg-[#F3F0E6] hover:bg-[#E7E1CF] transition-all text-[#1F2937] rounded-full font-medium border border-[#E7E1CF]">Login</button>
             </div>
         </div>
 
