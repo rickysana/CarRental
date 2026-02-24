@@ -80,6 +80,7 @@ export const assets = {
     filter_icon,
     testimonial_image_1,
     testimonial_image_2,
+    heroCar: main_car,
     main_car,
     banner_car_image,
     car_image1,
@@ -229,7 +230,7 @@ export const dummyMyBookingsData = [
         "pickupDate": "2025-06-13T00:00:00.000Z",
         "returnDate": "2025-06-14T00:00:00.000Z",
         "status": "confirmed",
-        "price": 440,
+        "price": 1800,
         "createdAt": "2025-06-10T12:57:48.244Z",
     },
     {
@@ -240,7 +241,7 @@ export const dummyMyBookingsData = [
         "pickupDate": "2025-06-12T00:00:00.000Z",
         "returnDate": "2025-06-12T00:00:00.000Z",
         "status": "pending",
-        "price": 130,
+        "price": 4500,
         "createdAt": "2025-06-10T12:57:25.613Z",
     },
     {
@@ -251,7 +252,7 @@ export const dummyMyBookingsData = [
         "pickupDate": "2025-06-11T00:00:00.000Z",
         "returnDate": "2025-06-12T00:00:00.000Z",
         "status": "pending",
-        "price": 600,
+        "price": 1200,
         "createdAt": "2025-06-10T09:55:06.379Z",
     },
     {
@@ -262,7 +263,7 @@ export const dummyMyBookingsData = [
         "pickupDate": "2025-06-11T00:00:00.000Z",
         "returnDate": "2025-06-12T00:00:00.000Z",
         "status": "confirmed",
-        "price": 440,
+        "price": 1500,
         "createdAt": "2025-06-10T09:44:25.410Z",
     }
 ]

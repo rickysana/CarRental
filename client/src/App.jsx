@@ -7,6 +7,11 @@ import Home from './pages/Home'
 import MyBookings from './pages/MyBookings'
 import Footer from './components/Footer'
 import Login from './components/login'
+import Layout from './pages/owner/Layout'
+import Dashboard from './pages/owner/Dashboard'
+import AddCar from './pages/owner/AddCar'
+import ManageCars from './pages/owner/ManageCars'
+import ManageBookings from './pages/owner/ManageBookings'
 
 const App = () => {
 
@@ -22,6 +27,12 @@ const App = () => {
         <Route path='/car/:id' element={<CarDetails/>} />
         <Route path='/my-bookings' element={<MyBookings/>} />
         <Route path='/login' element={<Login />} />
+        <Route path='/owner' element={<Layout/>}>
+        <Route index element={<Dashboard/>}/>
+        <Route path="add-car" element={<AddCar/>}/>
+        <Route path="manage-cars" element={<ManageCars/>}/>
+        <Route path="manage-bookings" element={<ManageBookings/>}/>
+        </Route>
       </Routes>
       {!isOwnerPath && <Footer />}
     </>

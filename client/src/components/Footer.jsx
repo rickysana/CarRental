@@ -7,7 +7,7 @@ const Footer = () => {
 
             <div className='flex flex-wrap justify-between items-start gap-8 pb-6 border-borderColor border-b'>
                 <div className='max-w-80'>
-                    <img src={assets.logo} alt="Logo" className='h-8 md:h-9' />
+                    <img src={assets.logo} alt="Logo" className='h-14 md:h-14' />
                     <p className='max-w-80 mt-3'>
                         Rentora is a trusted vehicle rental platform connecting riders with reliable cars and bikes. We make travel easy, affordable, and convenient for everyone.
                     </p>

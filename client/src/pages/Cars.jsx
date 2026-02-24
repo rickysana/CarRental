@@ -1,64 +1,46 @@
-import React from "react"
+import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { dummyCarData, assets } from "../assets/assets"
+import Title from "../components/Title"
+import CarCard from "../components/CarCard"
 
 const Cars = () => {
+  const [input, setInput] = useState('')
   const navigate = useNavigate()
 
   return (
-    <div className="px-6 md:px-16 lg:px-24 xl:px-32 py-10">
-      
-      {/* 3 per row */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {dummyCarData.map(car => (
-          <div
-            key={car._id}
-            onClick={() => navigate(`/car/${car._id}`)}
-            className="cursor-pointer group"
-          >
-            <div className="rounded-xl overflow-hidden shadow-md group-hover:shadow-xl transition-all duration-300">
-              <img
-                src={car.image}
-                alt={car.model}
-                className="w-full h-[260px] object-contain rounded-xl group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
+   <div> 
 
-            <div className="mt-4 group-hover:text-pink-600 transition-colors duration-300">
-              <h2 className="text-lg font-semibold group-hover:text-pink-600 transition-colors duration-300">
-                {car.brand} {car.model}
-              </h2>
+    <div className="flex flex-col items-center py-20 bg-beige max-md:px-4">
+      <Title title="Available Vehicles" subTitle={'Explore our collection of well-maintained cars and bikes ready for your next ride.'}/>
 
-              <p className="text-gray-500 text-sm">
-                {car.category} • {car.year}
-              </p>
+      <div className='flex items-center bg-beige px-4 mt-6 max-w-140 w-full h-12 rounded-full shadow'>
+        <img src={assets.search_icon}  alt="Search Icon" className="w-4.5 h-4.5 mr-2"  />
 
-              <div className="flex flex-wrap gap-4 mt-3 text-gray-600 text-sm group-hover:text-gray-700 transition-colors duration-300">
-                <div className="flex items-center gap-1">
-                  <img src={assets.users_icon} className="h-4" />
-                  {car.seating_capacity}
-                </div>
+        <input onChange={(event) => setInput(event.target.value)} value={input} type="text" placeholder='Search by make, model, or features' className='w-full h-full outline-none text-gray-500'/>
 
-                <div className="flex items-center gap-1">
-                  <img src={assets.fuel_icon} className="h-4" />
-                  {car.fuel_type}
-                </div>
+        <img src={assets.filter_icon}  alt="" className="w-4.5 h-4.5 ml-2"/>
 
-                <div className="flex items-center gap-1">
-                  <img src={assets.car_icon} className="h-4" />
-                  {car.transmission}
-                </div>
+      </div>
+    </div>
 
-                <div className="flex items-center gap-1">
-                  <img src={assets.location_icon} className="h-4" />
-                  {car.location}
-                </div>
-              </div>
-            </div>
+    <div className='px-8 md:px-16 lg:px-24 xl:px-32'>
+      <hr className='border-borderColor/70' />
+    </div>
+
+    <div className='px-8 md:px-16 lg:px-24 xl:px-32 mt-10'>
+      <p className='text-gray-500 xl:px-20 max-w-7xl mx-auto'>Showing {dummyCarData.length} vehicles</p>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 xl:px-20 max-w-7xl mx-auto'>
+        {dummyCarData.map((car, index) => (
+          <div key={car._id || index}>
+            <CarCard car={car} />
+
           </div>
         ))}
-      </div>
+         
 
+      </div>
+    </div>
     </div>
   )
 }

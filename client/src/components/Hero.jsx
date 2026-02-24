@@ -1,40 +1,11 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { assets, cityList } from '../assets/assets'
 
 const Hero = () => {
-  const carRef = useRef(null)
   const[pickupLocation, setPickupLocation] = useState('')
   const[pickupDate, setPickupDate] = useState('')
   const[dropDate, setDropDate] = useState('')
   
-
-  const handleMove = (event) => {
-    const node = carRef.current
-    if (!node) return
-
-    const rect = node.getBoundingClientRect()
-    const x = event.clientX - rect.left
-    const y = event.clientY - rect.top
-    const midX = rect.width / 2
-    const midY = rect.height / 2
-
-    const rotateY = ((x - midX) / midX) * 10
-    const rotateX = ((midY - y) / midY) * 8
-    const lift = -10
-
-    node.style.setProperty('--rx', `${rotateX}deg`)
-    node.style.setProperty('--ry', `${rotateY}deg`)
-    node.style.setProperty('--ty', `${lift}px`)
-  }
-
-  const handleLeave = () => {
-    const node = carRef.current
-    if (!node) return
-
-    node.style.setProperty('--rx', '0deg')
-    node.style.setProperty('--ry', '0deg')
-    node.style.setProperty('--ty', '0px')
-  }
 
   return (
     <div className='min-h-screen md:h-screen flex flex-col items-center justify-center gap-6 md:gap-14 text-center px-4 py-12 md:py-0'>
@@ -71,12 +42,9 @@ const Hero = () => {
         </form>
 
         <img
-          ref={carRef}
-          src={assets.main_car}
+          src={assets.heroCar}
           alt="car"
-          className='max-h-40 md:max-h-90 hero-car'
-          onMouseMove={handleMove}
-          onMouseLeave={handleLeave}
+          className='w-full max-w-2xl'
         />
 
     </div>

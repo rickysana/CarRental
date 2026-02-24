@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { assets } from "../assets/assets";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -7,7 +8,7 @@ export default function Login() {
   return (
     <div className="flex h-[700px] w-full">
             <div className="w-full hidden md:inline-block">
-                <img className="h-full w" src={assets.main_car} alt="leftSideImage" />
+                <img className="h-full" src={assets.main_car} alt="leftSideImage" loading="lazy" decoding="async" />
             </div>
         
             <div className="w-full flex flex-col items-center justify-center">
