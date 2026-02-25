@@ -24,7 +24,7 @@ const Footer = () => {
                     <ul className='mt-3 flex flex-col gap-1.5 '>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Browse Cars</a></li>
-                        <li><a href="#">List Your Car</a></li>
+                        <li><a href="#">List Your Vehicle</a></li>
                         <li><a href="#">About Rentora</a></li>
                     </ul>
                 </div>

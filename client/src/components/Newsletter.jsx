@@ -14,7 +14,7 @@ const Newsletter = () => {
                     placeholder="Enter your email address"
                     required
                 />
-                <button type="submit" className="md:px-12 px-8 h-full text-white bg-pink-500 hover:bg-pink-600 transition-all cursor-pointer rounded-md rounded-l-none">
+                <button type="submit" className="md:px-12 px-8 h-full text-white bg-black hover:bg-blue-600 transition-all cursor-pointer rounded-md rounded-l-none">
                     Subscribe
                 </button>
             </form>
