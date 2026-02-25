@@ -70,6 +70,19 @@ const navigate = useNavigate()
               <button onClick={() => navigate('/login')} className="cursor-pointer px-8 py-2 bg-[#F3F0E6] hover:bg-[#E7E1CF] transition-all text-[#1F2937] rounded-full font-medium border border-[#E7E1CF]">Login</button>
             </div>
         </div>
+         {/* Maintenance Notice */}
+<div className="absolute left-0 bottom-0 w-full overflow-hidden border-t border-[#E7E1CF] bg-beige">
+  <div className="maintenance-track">
+    🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    
+  </div>
+</div>
 
     </div>
   )

@@ -127,7 +127,7 @@ export const dummyCarData = [
   "fuel_type": "Petrol/Diesel",
   "transmission": "Automatic",
   "pricePerDay": 1800,
-  "location": "Chandigarh",
+  "location": "Manipur",
   "description": "The Maruti Suzuki Dzire is a compact sedan known for its excellent fuel efficiency, comfortable ride, and low maintenance cost. It is widely used for city driving as well as taxi and rental services in India. The Dzire offers a spacious cabin, smooth automatic transmission, and reliable performance.",
   "isAvaliable": true,
   "createdAt": "2025-04-16T07:26:56.215Z"

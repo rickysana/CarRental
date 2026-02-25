@@ -65,3 +65,18 @@ a:hover {
 .hero-car:hover{
   filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.18));
 }
+
+.maintenance-track {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: maintenanceMove 35s linear infinite;
+  color: #e80d1c; /* gold-brown matching theme */
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes maintenanceMove {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
