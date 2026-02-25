@@ -71,7 +71,7 @@ const navigate = useNavigate()
             </div>
         </div>
          {/* Maintenance Notice */}
-<div className="absolute left-0 bottom-0 w-full overflow-hidden border-t border-[#E7E1CF] bg-beige">
+<div className="absolute left-0 bottom-0 w-full overflow-hidden bg-beige">
   <div className="maintenance-track">
     🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     🚧 The website is currently under development&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
